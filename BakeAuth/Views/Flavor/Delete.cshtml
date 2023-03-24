@@ -5,10 +5,11 @@
 @model Flavor
 <div class="text-center">
 
-<h1>delete <span>@Model.name</span>?</h1>
+<h1>Delete <span>@Model.name</span>?</h1>
 <hr class="my-4">
-<a href="/flavor" class="btn btn-warning">Cancel</a>
+<a href="/flavor" class="button">Cancel</a><br><br>
+<br>
     <form action="/flavor/delete/@Model.flavor_id" method="post">
-        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="button">Delete</button>
     </form>
 </div>
