@@ -8,14 +8,16 @@
 {
     @Html.ValidationSummary("Please fix the following error(s)") 
 }
-
+<h1>Add Flavor</h1>
 <div>
     @using (Html.BeginForm("/flavor/create"))
     {
+        
         <label for="name">Name</label>
-        <input class="form-control" type="text" name="name" id="name" required>
+        <input type="text" name="name" id="name" required>
         <br>
         <button class="btn btn-primary" type="submit">Add Flavor</button>
         <a class="btn btn-danger" href="/flavor">Cancel</a>
+        
     }
 </div>
