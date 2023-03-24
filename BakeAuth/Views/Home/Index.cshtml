@@ -2,8 +2,8 @@
   Layout = "_Layout";
 }
 @using BakeAuth.Models;
-
-@* <div class="jumbotron jumbotron-fluid">
+@* 
+<div class="jumbotron jumbotron-fluid">
   <div class="container" id='imgText'>
     <h1 class="display-2">Sweets n Treats </h1>
   </div>
@@ -11,19 +11,19 @@
 
 
 <div class="text-center">
-  <h1>Sweet N Treats</h1>
+  <h1>Sweets N Treats</h1>
   <hr class="my-4">
   @if (User.Identity.IsAuthenticated)
   {
-    <form class="my-3" action="/account/logoff" method="post">
+    @* <form class="my-3" action="/account/logoff" method="post">
       <button class="btn btn-danger" type="submit">Log Out</button>
-    </form>
+    </form> *@
   }
   else 
   {
     <h3 class="my-3">Please @Html.ActionLink("log in", "LogIn", "Account") to manage your treats and flavors.</h3>
   }
-<a href="/treat">Treats</a>
+<h1><a href="/treat">Treats</a></h1>
 <hr class="w-50">
 <br>
 <div class="w-25 text-center m-auto">
@@ -44,7 +44,7 @@
     <br>
   }
 </div>
-<a href="/flavor">Flavors</a>
+<h1><a href="/flavor">Flavors</a></h1>
 <hr class="w-50">
 <br>
 <div class="w-25 text-center m-auto">
