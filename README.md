@@ -2,19 +2,21 @@
 
 #### By Mitchell Gantz
 
-An application to track students and courses for a fictional university.
+_This web app allows adding of new Treats and Flavors, and assigning Treats Flavors and Flavors Treats._
 
 ## Technologies Used
 
 * C#
 * .Net 6
 * ASP.Net EF Core 6
-* SQL
+* MySQL
 * LINQ
 
 ### Objectives 
 
-The goal for this project was to create a fully functional CRUD MVC web application that utilizes a many-to-many MySQL database. EF Core was used for communication with the database.
+* The application should have user authentication. A user should be able to log in and log out. Only logged in users should have create, update, and delete functionality. All users should be able to have read functionality.
+*  There should be a many-to-many relationship between Treats and Flavors. A treat can have many flavors (such as sweet, savory, spicy, or creamy) and a flavor can have many treats. For instance, the "sweet" flavor could include chocolate croissants, cheesecake, and so on.
+*  A user should be able to navigate to a splash page that lists all treats and flavors. Users should be able to click on an individual treat or flavor to see all the treats/flavors that belong to it.
 
 ## Setup/Installation Requirements
 
@@ -25,22 +27,24 @@ The goal for this project was to create a fully functional CRUD MVC web applicat
 * .NET Core CLI
 ```
 dotnet tool install --global dotnet-ef --version 6.0.0
+ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0
+ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 6.0.0
 ```
 
 1. Clone this repo to your workspace.
 
-2. Navigate to the `PROJECTNAME` directory.
+2. Navigate to the `BakeAuth` directory.
 
 3. Create a file named `appsettings.json` with the following code. Be sure to update the Default Connection to your MySQL credentials.
 ```
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=NAME;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];",
+    "DefaultConnection": "Server=localhost;Port=3306;database=BakeAuth;uid=root;pwd=epicodus;",
   }
 }
 ```
 
-4. Install dependencies within the `PROJECTNAME` directory
+4. Install dependencies within the `BakeAuth` directory
 ```
 $ dotnet restore
 ````
@@ -49,8 +53,6 @@ $ dotnet restore
  ```
  $ dotnet run
  ```
-
-
 
 
 ## Known Bugs
