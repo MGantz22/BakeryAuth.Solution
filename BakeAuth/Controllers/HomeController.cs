@@ -1,21 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
-using System.Collections.Generic;
-using System.Linq;
+using BakeAuth.Models;
 
-namespace Name
+namespace BakeAuth.Controllers
 {
   public class HomeController : Controller
   {
-
-    [Route("/")]
-    public ActionResult Letter() 
+    private readonly BakeAuthContext _db;
+    public HomeController(BakeAuthContext db)
     {
-      LetterVariable myLetterVariable = new LetterVariable();
-      myLetterVariable.Recipient = "Lina";
-      myLetterVariable.Sender = "Jasmine";
-      return View(myLetterVariable);
+      _db = db;
     }
-
+    
+    [HttpGet("/")]
+    public ActionResult Index() {
+      ViewBag.treats = _db.treats.ToList();
+      ViewBag.flavors = _db.flavors.ToList();
+      return View();
+    }
   }
 }

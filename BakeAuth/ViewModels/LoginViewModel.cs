@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BakeryAuth.ViewModels
+namespace BakeAuth.ViewModels
 {
   public class LoginViewModel
   {
