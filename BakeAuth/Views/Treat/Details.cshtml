@@ -5,9 +5,9 @@
 @model Treat
 
 <div class="text-center">
-    <a href="/">Home</a>
+    
 <br>
-    <a href="/treat">All treats</a>
+    
     <h1>@Model.name</h1>
     <hr class="my-4">
 
@@ -27,9 +27,9 @@
       {
         <div class="card w-25 m-auto">
           <div class="card-body">
-            <a class="card-title" href="/flavor/details/@flavor.flavor_id">@flavor.name</a>
+            <h1><a class="card-title" href="/flavor/details/@flavor.flavor_id">@flavor.name</a></h1>
             <form class="my-3" action="/treat/delete/join/@Model.treat_id/@flavor.flavor_id" method="post">
-              <button type="submit" class="btn btn-danger">X</button>
+              <button type="submit" class="btn btn-danger">Delete</button>
             </form>
           </div>
         </div>
