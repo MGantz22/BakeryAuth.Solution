@@ -17,23 +17,19 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-        @* <a class="nav-link enlarge" href='/'>Home</a> *@
-        <a class="nav-link enlarge" href='/Recipes'>Sweet</a> 
-        <a class="nav-link enlarge" href='/Recipes/MyRecipe'>My Added Treats</a> 
-        <a class="nav-link enlarge" href='/Tags/Index'> Savory</a>
-        <!-- <a class="nav-link enlarge" href='/Ingredients'> Ingredients</a> -->
-        <!-- <a class="nav-link enlarge" href='/Ratings'> Top Rated</a> -->
-        @* <a class="nav-link enlarge" href='/Account'> Login</a> *@
-  </div>
+  @* <div class="collapse navbar-collapse" id="navbarNav">
+       
+        <a class="nav-link enlarge" href='/Flavor'>Flavors</a> 
+        <a class="nav-link enlarge" href='/Treat'>Treats</a>
+      
+  </div> *@
   	<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
   	<label for="menu-icon"></label>
   	<nav class="nav"> 		
   		<ul class="pt-5">
-  			<li><a href="/Recipes">Sweets</a></li>
-  			<li><a href="/Tags/Index">Categories</a></li>
-  			@* <li><a href="/Ratings">Ratings</a></li> *@
-  			<li><a href="/Account">Login</a></li>
+  			<li><a href="/Flavor">Flavors</a></li>
+  			<li><a href="/Treat">Treats</a></li>
+  			<li><a href="/Account">Login & out</a></li>
         <li><a href="/">Home</a></li>
   		</ul>
   	</nav>
@@ -43,6 +39,6 @@
 </nav>
     @RenderBody()
     <br>
-    @await Html.PartialAsync("Footer")
+    
   </body>
 </html>
